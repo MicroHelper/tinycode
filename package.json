@@ -1,15 +1,19 @@
 {
-  "name": "tinycode",
-  "version": "0.1.0",
+  "name": "@wuwei-hx/tinycode",
+  "version": "0.3.0",
   "description": "a collection of tiny code",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wuwei-hx/tinycode.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "author": "David Wu",
   "license": "ISC",
