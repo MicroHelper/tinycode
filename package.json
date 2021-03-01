@@ -1,0 +1,30 @@
+{
+  "name": "@microhelper/tinycode",
+  "version": "0.3.2",
+  "description": "a collection of tiny code",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicroHelper/tinycode.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "David Wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MicroHelper/tinycode/issues"
+  },
+  "homepage": "https://github.com/MicroHelper/tinycode#readme",
+  "dependencies": {
+    "@types/node": "^12.12.12"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  }
+}
