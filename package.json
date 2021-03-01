@@ -1,6 +1,6 @@
 {
   "name": "@microhelper/tinycode",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "a collection of tiny code",
   "main": "index.js",
   "scripts": {
