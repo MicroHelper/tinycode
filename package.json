@@ -1,13 +1,12 @@
 {
   "name": "@microhelper/tinycode",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "a collection of tiny code",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
