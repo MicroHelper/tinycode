@@ -1,13 +1,25 @@
 {
   "name": "@microhelper/tinycode",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "a collection of tiny code",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
   "repository": {
     "type": "git",
@@ -16,15 +28,46 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "author": "David Wu",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/MicroHelper/tinycode/issues"
   },
   "homepage": "https://github.com/MicroHelper/tinycode#readme",
-  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "David Wu",
+  "module": "dist/tinycode.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/tinycode.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tinycode.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "typescript": "^4.2.2",
-    "@types/node": "^12.12.12"
+    "@size-limit/preset-small-lib": "^5.0.1",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "husky": "^7.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^5.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.2.2"
   }
 }
